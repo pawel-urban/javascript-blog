@@ -57,14 +57,13 @@
     /* [DONE] get the article id */
     const articleId = article.getAttribute('id');
 
-    /* [IN PROGRESS] find the title element */
+    /* [DONE] find the title element */
+    /* [DONE] get the title from the title element */
     const articleTitle = article.querySelector(optTitleSelector).innerHTML;
 
+    /*[IN PROGRESS] create HTML of the link */
+    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
     }
-    /* [IN PROGRESS] get the title from the title element */
-
-    /* create HTML of the link */
-
     /* insert link into titleList */
 
   }
