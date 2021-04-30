@@ -1,6 +1,5 @@
+'use strict';
 {
-  'use strict';
-
   /*
   document.getElementById('test-button').addEventListener('click', function(){
     const links = document.querySelectorAll('.titles a');
@@ -46,7 +45,9 @@
 
   function generateTitleLinks(){
 
-    /* remove contents of titleList */
+    /* [IN PROGRESS] remove contents of titleList */
+    const titleList = document.querySelector(optTitleListSelector);
+    titleList.innerHTML = '';
 
     /* for each article */
 
@@ -61,6 +62,6 @@
       /* insert link into titleList */
 
   }
-
+  
   generateTitleLinks();
 }
