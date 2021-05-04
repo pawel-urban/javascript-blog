@@ -78,11 +78,11 @@
 }
 
 function generateTags(){
-  /* [IN PROGRESS] find all articles */
+  /* [DONE] find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
-  
-  /* START LOOP: for every article: */
 
+  /* [IN PROGRESS] START LOOP: for every article: */
+  for(let article of articles){
     /* find tags wrapper */
 
     /* make html variable with empty string */
@@ -102,6 +102,7 @@ function generateTags(){
     /* insert HTML of all the links into the tags wrapper */
 
   /* END LOOP: for every article: */
+  }
 }
 
 generateTags();
