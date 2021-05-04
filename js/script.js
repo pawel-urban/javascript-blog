@@ -90,11 +90,12 @@ function generateTags(){
     /* [DONE] make html variable with empty string */
     let html = '';
 
-    /* [IN PROGRESS] get tags from data-tags attribute */
+    /* [DONE] get tags from data-tags attribute */
     const articleTags = article.getAttribute('date-tags');
 
-    /* split tags into array */
-
+    /* [IN PROGRESS] split tags into array */
+    const articleTagsArray = articleTags.split(' ');
+    
     /* START LOOP: for each tag */
 
       /* generate HTML of the link */
