@@ -93,18 +93,22 @@ function generateTags(){
     /* [DONE] get tags from data-tags attribute */
     const articleTags = article.getAttribute('date-tags');
 
-    /* [IN PROGRESS] split tags into array */
+    /* [DONE] split tags into array */
     const articleTagsArray = articleTags.split(' ');
-    
-    /* START LOOP: for each tag */
 
-      /* generate HTML of the link */
+    /* [DONE] START LOOP: for each tag */
+    for(let tag of articleTagsArray){
 
-      /* add generated code to html variable */
+      /* [DONE] generate HTML of the link */
+      const linkHTML = '<li><a href="#tag-' + articleTags + '"<span>' + tag + '</span></a></li>';
 
-    /* END LOOP: for each tag */
+      /* [DONE] add generated code to html variable */
+      html = html + linkHTML;
 
-    /* insert HTML of all the links into the tags wrapper */
+    /* [DONE] END LOOP: for each tag */
+    }
+    /* [DONE] insert HTML of all the links into the tags wrapper */
+    tagsWrapper.innerHTML = html;
 
   /* END LOOP: for every article: */
   }
