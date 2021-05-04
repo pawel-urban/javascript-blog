@@ -38,14 +38,14 @@
   optTitleListSelector = '.titles',
   optArticleTagsSelector '.post-tags .list';
 
-  function generateTitleLinks(){
+  function generateTitleLinks(customSelector = ''){
 
     /* [DONE] remove contents of titleList */
     const titleList = document.querySelector(optTitleListSelector);
     titleList.innerHTML = '';
 
     /* [DONE] for each article */
-    const articles = document.querySelectorAll(optArticleSelector);
+    const articles = document.querySelectorAll(optArticleSelector + customSelector);
 
     let html = '';
 
@@ -156,13 +156,16 @@ function tagClickHandler(event){
 }
 
 function addClickListenersToTags(){
-  /* find all links to tags */
+  /* [DONE] find all links to tags */
+  const links = document.querySelectorAll('a[href="' + href + '"]');
 
-  /* START LOOP: for each link */
+  /* [DONE] START LOOP: for each link */
+  for(let link of links){
+    /* [DONE] add tagClickHandler as event listener for that link */
+    link.addEventListener('click', tagClickHandler);
 
-    /* add tagClickHandler as event listener for that link */
-
-  /* END LOOP: for each link */
+  /* [DONE] END LOOP: for each link */
+  }
 }
 
 addClickListenersToTags();
