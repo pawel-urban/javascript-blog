@@ -78,8 +78,9 @@
 }
 
 function generateTags(){
-  /* find all articles */
-
+  /* [IN PROGRESS] find all articles */
+  const articles = document.querySelectorAll(optArticleSelector);
+  
   /* START LOOP: for every article: */
 
     /* find tags wrapper */
