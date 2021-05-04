@@ -87,10 +87,11 @@ function generateTags(){
     /* [DONE] find tags wrapper */
     const tagsWrapper = article.querySelector(optArticleTagsSelector);
 
-    /* [IN PROGRESS] make html variable with empty string */
+    /* [DONE] make html variable with empty string */
     let html = '';
-    
-    /* get tags from data-tags attribute */
+
+    /* [IN PROGRESS] get tags from data-tags attribute */
+    const articleTags = article.getAttribute('date-tags');
 
     /* split tags into array */
 
