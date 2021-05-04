@@ -241,3 +241,21 @@ function generateAuthors(){
      /* [DONE] execute function "generateTitleLinks" with article selector as argument */
      generateTitleLinks('data-author="' + author + '"]');
    }
+
+   function addClickListenersToAuthors(){
+     /* [DONE] find all links to authors */
+     const authorHrefs = document.querySelectorAll('a[href^="#author-"]');
+
+     /* [DONE] START LOOP: for each link */
+     for(let authorHref of authorHrefs){
+
+       /* [DONE] add tagClickHandler as event listener for that link */
+       authorHref.addEventListener('click', authorClickHandler);
+
+     /* [DONE] END LOOP: for each link */
+     }
+   }
+
+   addClickListenersToAuthors();
+
+   }
