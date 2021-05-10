@@ -94,3 +94,32 @@ body {
     margin: 0 10px 0 0;
   }
 }
+/* Tags */
+.tag-size-1 {
+  font-size: 10px;
+  color: #4169E1;
+}
+.tag-size-2 {
+  font-size: 14px;
+  color: #DB7093;
+}
+.tag-size-3 {
+  font-size: 15px;
+  color: #F4A460;
+}
+.tag-size-4 {
+  font-size: 22px;
+  color: #F5F5F5;
+}
+.tag-size-5 {
+  font-size: 18px;
+  color: #66CC33;
+}
+.tag-size-6 {
+  font-size: 30px;
+  color: #FF3366;
+}
+.tags li{
+  display: inline-block;
+  margin-right: 3px;
+}
