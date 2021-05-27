@@ -2,7 +2,8 @@
 'use strict';
 
   const templates = {
-  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
+  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML),
+  tagLink: Handlebars.compile(document.querySelector('#template-tag-link').innerHTML);
   }
 
   const titleClickHandler = function(event){
@@ -117,7 +118,8 @@
       /* [DONE] START LOOP: for each tag */
       for(let tag of articleTagsArray){
         /* [DONE] generate HTML of the link */
-        const linkHTML = '<li><a href="#tag-' + articleTags + '">' + tag + '</a></li>';
+        const linkHTMLData = { id: tag, title: tag };
+        const linkHTML = templates.tagLink(linkHTMLData);
         /* [DONE] add generated code to html variable */
         html = html + linkHTML;
         /* [NEW] check if this link is NOT already in allTags */
