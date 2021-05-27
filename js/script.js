@@ -1,10 +1,9 @@
-'use strict';
 {
-  /*
-  document.getElementById('test-button').addEventListener('click', function(){
-    const links = document.querySelectorAll('.titles a');
-  });
-  */
+'use strict';
+
+  const templates = {
+  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
+  }
 
   const titleClickHandler = function(event){
     event.preventDefault();
@@ -57,7 +56,8 @@
     /* [DONE] get the title from the title element */
     const articleTitle = article.querySelector(optTitleSelector).innerHTML;
     /*[DONE] create HTML of the link */
-    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+    const linkHTMLData = {id: articleId, title: articleTitle};
+    const linkHTML = templates.articleLink(linkHTMLData);
     /* [DONE] insert link into titleList */
     html = html + linkHTML;
     }
@@ -94,7 +94,7 @@
     const normalizedCount = count - params.min;
     const normalizedMax = params.max - params.min;
     const percentage = normalizedCount / normalizedMax;
-    const classNumber = Math.floor( percentage * (optCloudClassCount - 2) + 1 );
+    const classNumber = Math.floor(percentage * (optCloudClassCount - 2) + 1 );
     return optCloudClassPrefix + classNumber;
   }
 
